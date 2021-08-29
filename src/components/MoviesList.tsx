@@ -1,9 +1,13 @@
 import React from "react";
 
-import Movie from "./Movie";
+import Movie, { MoviesType } from "./Movie";
 import classes from "./MoviesList.module.scss";
 
-const MovieList = (props) => {
+export type MoviesListType = {
+  movies: Array<MoviesType>;
+};
+
+const MovieList = (props: MoviesListType) => {
   return (
     <ul className={classes["movies-list"]}>
       {props.movies.map((movie) => (
